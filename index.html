@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mare Nostridium · Dashboard de Ventas</title>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header>
+    <div id="logo">Mare Nostridium</div>
+    <div>
+        <h1>🍽️ Mare Nostridium</h1>
+        <p class="subtitle">Dashboard de ventas y análisis de datos del restaurante</p>
+    </div>
+</header>
+
+<!-- Sección de fotos de platos -->
+<h2>Fotos de nuestros platos</h2>
+<div class="fotos-platos" id="fotosPlatos">
+    <img src="plato1.jpg" alt="Plato 1">
+    <img src="plato2.jpg" alt="Plato 2">
+</div>
+
+<p id="infoFilas"></p>
+
+<h2>KPIs principales</h2>
+<div class="kpis">
+    <div class="kpi" id="kpiVentas"></div>
+    <div class="kpi" id="kpiUnidades"></div>
+</div>
+
+<h2>KPIs detallados</h2>
+<div class="kpis">
+    <div class="kpi">
+        <strong>Top 5 productos (€)</strong>
+        <ul id="kpiTopProductos"></ul>
+    </div>
+
+    <div class="kpi">
+        <strong>Ventas por franja (€)</strong>
+        <ul id="kpiFranja"></ul>
+    </div>
+
+    <div class="kpi">
+        <strong>Ventas por familia (€)</strong>
+        <ul id="kpiFamilia"></ul>
+    </div>
+</div>
+
+<h2>Gráficos</h2>
+<canvas id="chartTopProductos"></canvas>
+<canvas id="chartFranja"></canvas>
+<canvas id="chartFamilia"></canvas>
+
+<h2>Primeras 10 filas RAW</h2>
+<table id="tablaRaw"></table>
+
+<h2>Primeras 10 filas LIMPIAS</h2>
+<table id="tablaClean"></table>
+
+<button id="downloadBtn">⬇ Descargar CSV limpio</button>
+
+<script src="app.js"></script>
+</body>
+</html>
